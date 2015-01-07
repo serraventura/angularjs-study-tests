@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" ng-app="myTodo" ng-controller="todoController">
+<head>
+
+<style type="text/css">
+
+  .inactive {
+      border: none;
+      background-color: #fff;
+  }
+
+</style>
+
+</head>
+<body>
+
+  Add Task: <input type="text" ng-model='dom.title'><input type="button" value="add" ng-click='addTask()'>
+
+  <table border="1">
+    <thead>
+      <tr><th colspan="6">To do</th></tr>
+      <tr>
+        <th>#</th>
+        <th>Task</th>
+        <th>Date</th>
+        <th>Done</th>
+        <th>#</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="todo in todoList">
+        <td>{{$index + 1}}</td>
+        <td><input type="text" ng-model='todo.title' class='inline-edit inactive'></td>
+        <td><input type="text" ng-model='todo.date' class='inline-edit inactive'></td>
+        <td><input type="checkbox" ng-model='todo.flag'></td>
+        <!-- <td>(<a ng-click='editTask(todo)'>edit</a>)</td> -->
+        <td>(<a ng-click='delTask(todo)'>del</a>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="controller.js"></script>
+  <script type="text/javascript" src="directives.js"></script>
+
+</body>
+</html>

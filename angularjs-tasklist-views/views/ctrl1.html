@@ -1,0 +1,29 @@
+  <div ng-controller="todoController">
+
+    Add Task: <input type="text" ng-model='dom.title'><input type="button" value="add" ng-click='addTask()'>
+
+    <table border="1" style="width:100%">
+      <thead>
+        <tr><th colspan="6">To do</th></tr>
+        <tr>
+          <th>#</th>
+          <th>Task</th>
+          <th>Date</th>
+          <th>Done</th>
+          <th>#</th>
+          <th>#</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="todo in todoList">
+          <td>{{$index + 1}}</td>
+          <td>{{todo.title}}</td>
+          <td>{{todo.date}}</td>
+          <td><input type="checkbox" ng-model='todo.flag'></td>
+          <td>(<a index="{{$index}}" edit-task="{{todo}}">edit</a>)</td>
+          <td>(<a ng-click='delTask(todo)'>del</a>)</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>

@@ -1,0 +1,14 @@
+  <div ng-controller="pilotController">
+
+    <table border="1" style="width:100%">
+      <thead>
+        <tr><th>Pilots</th></tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="pilot in pilotsList">
+          <td>{{pilot.Driver.givenName}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="myTodo">
+<head>
+
+<style type="text/css">
+  
+  .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+</style>
+  
+
+</head>
+<body>
+
+<div ng-controller="tabsController" style="width:50%; border:1px;">
+  <tabset>
+    <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+      <div style="padding:10px;" data-ng-include src='tab.page'></div>
+    </tab>
+  </tabset>
+</div>
+
+<!--   <div data-ng-include data-src="'views/ctrl1.html'"></div>
+  <div data-ng-include data-src="'views/ctrl2.html'"></div> -->
+
+  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="ui-bootstrap-tpls-0.10.0.min.js"></script>
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="service.js"></script>
+  <script type="text/javascript" src="controller.js"></script>
+  <script type="text/javascript" src="directives.js"></script>
+
+</body>
+</html>

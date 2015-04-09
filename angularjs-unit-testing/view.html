@@ -1,0 +1,13 @@
+<div>
+	{{message}}
+	<hr>
+		<input type="text" ng-model="dom.name" /><button ng-click="add()">add</button>
+	<hr>
+	<ul>
+		<li ng-repeat="item in list">{{item.name}} - <button ng-click="remove(item)">remove</button></li>
+	</ul>
+	<hr>
+	<ul>
+		<li ng-repeat="(id, item) in list2">{{id}} - {{item}}</li>
+	</ul>
+</div>

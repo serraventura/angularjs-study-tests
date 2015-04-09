@@ -1,0 +1,22 @@
+<div>
+
+	<fieldset>
+		<form>
+			Item:
+			<input type="input" ng-model="dom.item" />
+			Qty:
+			<input type="input" ng-model="dom.qty" value="1" />
+			Value:
+			<input type="input" ng-model="dom.value" />
+			<input type="checkbox" ng-model="dom.must" />
+			<input type="button" value="add" ng-click="addItem();" />
+			<div>{{errMsg}}</div>
+		</form>
+	</fieldset>
+
+	<br />
+	<br />
+	Shopping List - Search: <input type="text" ng-model="search" /><input type="button" value="Remove All" ng-click="removeAll();" />
+	<item-list></item-list>
+
+</div>

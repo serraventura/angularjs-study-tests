@@ -1,0 +1,29 @@
+<!doctype html>
+  <html class="no-js"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body ng-app="angularjsTestApp">
+
+    <div class="container" ng-include="'src/shoppingList/views/main.html'" ng-controller="shoppingListCtrl"></div>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="vendor/bower_components/angular/angular.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) src/scripts.js -->
+        <script src="src/app.js"></script>
+        <script src="src/shoppingList/controllers/shoppingList.js"></script>
+        <script src="src/shoppingList/services/shoppingService.js"></script>
+        <script src="src/shoppingList/directives/itemList.js"></script>
+        <script src="src/shoppingList/filters/totalValueQty.js"></script>
+        <script src="src/shoppingList/filters/totalValueMustHave.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

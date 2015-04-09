@@ -1,0 +1,48 @@
+<div>
+
+	<table width="100%" border="1">
+		<thead>
+		<tr>
+			<th>#</th>
+			<th>Item</th>
+			<th>Qty</th>
+			<th>Value</th>
+			<th>Must have</th>
+			<th>#</th>
+			<th>#</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="item in result=(listItem | filter:{'item':search}) track by $index">
+			<td>{{$index + 1}}</td>
+			<td>
+				<span ng-show="!isEditing($index)" ng-bind="item.item"></span>
+				<input ng-show="isEditing($index)" type="input" ng-model="item.item" />
+			</td>
+			<td>
+				<span ng-show="!isEditing($index)" ng-bind="item.qty"></span>
+				<input ng-show="isEditing($index)" type="input" ng-model="item.qty" />
+			</td>
+			<td>
+				<span ng-show="!isEditing($index)" ng-bind="item.value"></span>
+				<input ng-show="isEditing($index)" type="input" ng-model="item.value" />
+			</td>
+			<td>
+				<input  type="checkbox" ng-model="item.must" />
+			</td>
+			<td>
+				<input type="button" ng-show="isEditing($index)" value="save" ng-click="editDone();" />
+				<input type="button" ng-show="!isEditing($index)" value="edit" ng-click="editItem($index);" />
+			</td>
+			<td><input type="button" value="del" ng-click="removeItem(item);" /></td>
+		</tr>
+		<tr>
+			<td colspan="7">Total: {{result | totalValueQty}}</td>
+		</tr>
+		<tr>
+			<td colspan="7">Total must: {{result | totalValueMustHave}}</td>
+		</tr>
+		</tbody>
+	</table>
+
+</div>

@@ -1,0 +1,46 @@
+body{
+    margin: 0px;
+    height: auto;
+}
+
+#container{
+    max-width: 1457px;
+    width: 100%;
+}
+
+.responsive-image{
+    max-width: 100%; 
+    display:block; 
+    height: auto;
+}
+
+#middle, #footer, #header, #buttons{
+    width: 100%;
+    float: left;
+}
+
+#footer{
+    margin-top: -1px;
+}
+
+ul{
+    list-style:none;
+    width: 33.33%;
+    margin: 0px;
+    padding: 0px;
+    float:left;
+}
+
+#buttons > ul{
+    width: 100%;
+    margin-top: -6px;
+}
+
+#buttons > ul > li{
+    width: 33.33%;
+    margin: 0px;
+    padding: 0px;
+    float:left;
+    height: auto;
+}
+
